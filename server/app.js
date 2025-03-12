@@ -6,7 +6,7 @@ const initApp = async () => {
   const express = require('express')
   const mongoose = require('mongoose')
   const cors = require('cors')
-  const fs = require('fs') 
+  const fs = require('fs')
 
   if (process.env.USE_REMOTE_DB === 'true') {
     const certPath = process.env.MONGO_CERT_PATH
@@ -21,9 +21,7 @@ const initApp = async () => {
       tls: true,
       tlsCertificateKeyFile: certPath
     })
-      .then(() => {
-        console.warn('✅ CONNECTED TO REMOTE DB')
-      })
+      .then(() => console.warn('✅ CONNECTED TO REMOTE DB'))
       .catch(err => console.warn('❌ Remote DB Connection Error:', err))
   } else {
     mongoose.connect(process.env.MONGO_LOCAL_DB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -37,13 +35,19 @@ const initApp = async () => {
   const app = http2Express(express)
   app.disable('x-powered-by')
 
-  if (process.env.MODE === 'DEV' || process.env.MODE === 'PREPRODUCTION') {
-    app.use(cors())
-    app.use((req, res, next) => {
-      console.warn(req.method + ' ' + req.url)
-      next()
-    })
-  }
+  const allowedOrigins = process.env.ALLOWED_ORIGINS ? process.env.ALLOWED_ORIGINS.split(',') : []
+
+  app.use(cors({
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true)
+      } else {
+        callback(new Error('❌ CORS blocked this request'))
+      }
+    },
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+  }))
 
   app.use(express.json({ limit: '500mb' }))
   app.use(express.urlencoded({ extended: true }))

@@ -1,6 +1,7 @@
 import { io } from 'socket.io-client'
+import { SERVER } from './configuration/global'
 
-const socket = io(process.env.REACT_APP_BALLKNOWLEDGE_SERVER_DEV, {
+const socket = io(SERVER, {
   autoConnect: false,
   transports: ['websocket']
 })

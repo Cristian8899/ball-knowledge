@@ -1,0 +1,96 @@
+.quiz-leaderboard-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #004d00, #008000);
+    color: white;
+    padding: 20px;
+}
+
+.quiz-leaderboard-container .quiz-leaderboard-card {
+    width: 80%;
+    max-width: 500px;
+    background: white;
+    color: black;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+}
+
+.quiz-leaderboard-container .leaderboard-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #FFD700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.quiz-leaderboard-container .leaderboard-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.quiz-leaderboard-container .leaderboard-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f7f7f7;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+.quiz-leaderboard-container .leaderboard-item:hover {
+    background: #d4edda;
+    transform: scale(1.05);
+}
+
+.quiz-leaderboard-container .leaderboard-item:first-child {
+    background: #FFD700 !important;
+    color: black;
+    font-size: 1.4rem;
+    font-weight: bold;
+    box-shadow: 0px 0px 10px rgba(255, 215, 0, 0.8);
+}
+
+.quiz-leaderboard-container .leaderboard-item:nth-child(2) {
+    background: #C0C0C0 !important;
+    color: black;
+    box-shadow: 0px 0px 8px rgba(192, 192, 192, 0.7);
+}
+
+.quiz-leaderboard-container .leaderboard-item:nth-child(3) {
+    background: #CD7F32 !important;
+    color: black;
+    box-shadow: 0px 0px 8px rgba(205, 127, 50, 0.7);
+}
+
+.quiz-leaderboard-container .leaderboard-item span {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.quiz-leaderboard-container .leaderboard-item strong {
+    color: #004d00;
+    font-size: 1.3rem;
+}
+
+.quiz-leaderboard-container .p-button-primary {
+    margin-top: 25px;
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 10px;
+}

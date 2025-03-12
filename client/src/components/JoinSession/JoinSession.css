@@ -1,0 +1,85 @@
+.join-session-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #004d00, #008000);
+    color: white;
+    padding: 20px;
+}
+
+.join-session-container .join-session-card {
+    width: 80%;
+    max-width: 600px;
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.join-session-container h1 {
+    font-size: 2rem;
+    color: #FFD700;
+}
+
+.join-session-container .p-inputtext {
+    width: 80%;
+    max-width: 300px;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 15px;
+}
+
+.join-session-container .p-button-primary {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #FFD700;
+    color: black;
+    font-weight: bold;
+    border: none;
+    transition: background 0.3s ease;
+}
+
+.join-session-container .p-button-primary:hover {
+    background-color: #FFC107;
+}
+
+.join-session-container .players-list {
+    margin-top: 20px;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 100%;
+}
+
+.join-session-container .players-list h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #004d00;
+}
+
+.join-session-container .players-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.join-session-container .players-list li {
+    font-size: 1.2rem;
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.join-session-container .players-list li:last-child {
+    border-bottom: none;
+}

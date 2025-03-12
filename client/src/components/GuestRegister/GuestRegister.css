@@ -1,0 +1,40 @@
+.guest-register-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #004d00, #008000);
+    color: white;
+    padding: 20px;
+}
+
+.guest-register-container .guest-register-card {
+    width: 400px;
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.guest-register-container .guest-register-input {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.guest-register-container .guest-register-btn {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.guest-register-container .guest-register-link {
+    color: #008000;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.guest-register-container .guest-register-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}

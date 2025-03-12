@@ -1,0 +1,119 @@
+.quiz-list-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #004d00, #008000); 
+    color: white;
+    padding: 20px;
+}
+
+.quiz-list-container .quiz-list-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #FFD700;
+}
+
+.quiz-list-container .quiz-datatable {
+    width: 90%;
+    max-width: 1000px;
+    background: white;
+    color: black;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+.quiz-list-container .p-datatable .p-datatable-thead > tr > th {
+    background: #006400;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    padding: 12px;
+}
+
+.quiz-list-container .p-datatable .p-column-header-content {
+    justify-content:center;
+}
+
+.quiz-list-container .p-column-filter-row .p-column-filter-menu-button, .p-column-filter-row .p-column-filter-clear-button {
+    display: none;
+}
+
+.quiz-list-container .p-fluid .p-inputtext {
+    text-align: center !important;
+}
+
+.quiz-list-container .p-datatable .p-datatable-tbody > tr {
+    transition: all 0.3s ease;
+}
+
+.quiz-list-container .p-datatable .p-datatable-tbody > tr:hover {
+    background: rgba(0, 128, 0, 0.1);
+}
+
+.quiz-list-container .p-datatable .p-datatable-tbody > tr > td {
+    font-size: 1rem;
+    padding: 12px;
+    text-align: center;
+}
+
+.quiz-list-container .p-button-success {
+    background-color: #008000;
+    border: none;
+    padding: 8px 16px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.quiz-list-container .p-button-success:hover {
+    background-color: #006400;
+}
+
+.quiz-list-container .p-paginator {
+    background: white;
+    border-radius: 10px;
+    padding: 8px;
+    margin-top: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.p-paginator .p-paginator-pages .p-paginator-page,
+.p-paginator .p-paginator-first,
+.p-paginator .p-paginator-last,
+.p-paginator .p-paginator-next,
+.p-paginator .p-paginator-prev {
+    color: black;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+    background: #FFD700;
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .quiz-list-container .quiz-datatable {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .quiz-list-container .quiz-list-title {
+        font-size: 2rem;
+    }
+
+    .quiz-list-container .p-datatable .p-datatable-thead > tr > th,
+    .quiz-list-container .p-datatable .p-datatable-tbody > tr > td {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .quiz-list-container .p-button-success {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+}

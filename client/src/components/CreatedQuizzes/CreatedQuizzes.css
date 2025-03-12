@@ -1,0 +1,149 @@
+.created-quizzes-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #004d00, #008000);
+    color: white;
+    padding: 20px;
+}
+
+.created-quizzes-container .created-quizzes-title {
+    font-size: 2.5rem;
+    color: #FFD700;
+    margin-bottom: 20px;
+}
+
+.created-quizzes-container .created-quizzes-table {
+    width: 90%;
+    max-width: 1000px;
+    background: white;
+    color: black;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+.created-quizzes-container .p-datatable .p-datatable-thead > tr > th {
+    background: #006400;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    padding: 12px;
+}
+
+.created-quizzes-container .p-datatable .p-column-header-content {
+    justify-content: center;
+}
+
+.created-quizzes-container .p-datatable .p-datatable-tbody > tr {
+    transition: all 0.3s ease;
+}
+
+.created-quizzes-container .p-datatable .p-datatable-tbody > tr:hover {
+    background: rgba(0, 128, 0, 0.1);
+}
+
+.created-quizzes-container .p-datatable .p-datatable-tbody > tr > td {
+    font-size: 1rem;
+    padding: 12px;
+    text-align: center;
+}
+
+.created-quizzes-container .quiz-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.created-quizzes-container .quiz-actions .p-button {
+    width: auto;
+}
+
+.created-quizzes-container .p-button-primary {
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.created-quizzes-container .p-paginator {
+    background: white;
+    border-radius: 10px;
+    padding: 8px;
+    margin-top: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.p-paginator .p-paginator-pages .p-paginator-page,
+.p-paginator .p-paginator-first,
+.p-paginator .p-paginator-last,
+.p-paginator .p-paginator-next,
+.p-paginator .p-paginator-prev {
+    color: black;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+    background: #FFD700;
+    color: black;
+}
+
+.dashboard-btn {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    background-color: #FFD700; 
+    color: black;
+    font-weight: bold;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.dashboard-btn:hover {
+    background-color: #E6C200; 
+    transform: scale(1.05);
+    box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.dashboard-btn:active {
+    transform: scale(0.95);
+}
+
+.dashboard-btn .pi {
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .created-quizzes-container .created-quizzes-table {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .created-quizzes-container .created-quizzes-title {
+        font-size: 2rem;
+    }
+
+    .created-quizzes-container .p-datatable .p-datatable-thead > tr > th,
+    .created-quizzes-container .p-datatable .p-datatable-tbody > tr > td {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .created-quizzes-container .p-button-primary {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}

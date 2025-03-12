@@ -1,0 +1,126 @@
+.quiz-editor-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #004d00, #008000);
+    color: white;
+    padding: 20px;
+}
+
+.quiz-editor-container .quiz-editor-title {
+    font-size: 2.5rem;
+    color: #FFD700;
+    margin-bottom: 20px;
+}
+
+.quiz-editor-container .quiz-form-card {
+    width: 80%;
+    max-width: 650px;
+    background: white;
+    color: black;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+.quiz-editor-container .quiz-input {
+    width: 100%;
+    margin: 12px 0;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.quiz-editor-container .quiz-dropdown {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.quiz-form-card .public-checkbox {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.quiz-editor-container .public-checkbox label {
+    margin-left: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #008000;
+}
+
+.quiz-editor-container .question-section {
+    margin-top: 20px;
+    border-top: 2px solid #008000;
+    padding-top: 15px;
+}
+
+.quiz-editor-container .question-section h3 {
+    font-size: 1.5rem;
+    color: #004d00;
+    margin-bottom: 10px;
+}
+
+.quiz-editor-container .question-item {
+    display: flex;
+    flex-direction: column;
+    background: #f8f9fa;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.quiz-editor-container .question-item .quiz-input {
+    margin-bottom: 8px;
+}
+
+.quiz-editor-container .question-item .option-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.quiz-editor-container .question-item .option-input input {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.quiz-editor-container .question-item .remove-question-btn {
+    align-self: flex-end;
+    margin-top: 5px;
+    background: #dc3545;
+    color: white;
+}
+
+.quiz-editor-container .add-question-btn {
+    margin-top: 15px;
+    background: #008000;
+    color: white;
+}
+
+.quiz-editor-container .update-quiz-btn {
+    margin-top: 15px;
+    background: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .quiz-editor-container .quiz-form-card {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .quiz-editor-container .quiz-input {
+        font-size: 1rem;
+    }
+
+    .quiz-editor-container .question-section h3 {
+        font-size: 1.3rem;
+    }
+}

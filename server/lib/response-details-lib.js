@@ -1,0 +1,18 @@
+/**
+ * @module errorDetailsLib
+ * @category libraries
+ */
+
+'use strict'
+module.exports = {
+  ACCEPTED: 'ACCEPTED',
+  CREATED: 'CREATED',
+  ERR_EXISTS: 'ERR_EXISTS',
+  ERR_BAD_REQUEST: 'ERR_BAD_REQUEST',
+  ERR_NOT_FOUND: 'ERR_NOT_FOUND',
+  ERR_SESSION_FULL: 'ERR_SESSION_FULL',
+  ERR_NO_PLAYER: 'ERR_NO_PLAYER',
+  ERR_NO_CREDENTIALS: 'ERR_NO_CREDENTIALS',
+  LOGIN_OK: 'LOGIN_OK',
+  REGISTER_OK: 'REGISTER_OK'
+}
